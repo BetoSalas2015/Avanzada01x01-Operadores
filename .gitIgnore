@@ -1,0 +1,9 @@
+# Archivos a omitir del repositorio
+
+01 - Operadores.vcxproj
+01 - Operadores.vcxproj.filters
+01 - Operadores.vcxproj.user
+
+# Carpetas a omitir del repositorio
+
+Debug/

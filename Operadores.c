@@ -17,8 +17,7 @@ void bases()
 	printf("0xb3 en Base 16 es %d en base 10\n", a);
 	printf("0xb3 en Base 16 es %o en base 8\n", a);
 }
-
-int main()
+void primarios() 
 {
 	// Jerarquía nivel 1 - Primarios
 	// Paréntesis - Llamada a función ( () )
@@ -42,6 +41,48 @@ int main()
 	PR(s, juancho->nombre);
 	PR(d, juancho->edad);
 	PR(c, juancho->sexo);
+}
+
+int main()
+{
+	//   Jerarquía nivel 2 - Operadores unarios
+	//  La negación ( ! )
+	a = 0;
+	if( !!!!!!!!!!!a )
+	{
+		printf("Esto es verdad\n");
+	}
+	else
+		printf("Esto es falso\n");
+	PR(d, a);
+	PR(d, !a);
+	PR(d, !!a);
+	PR(d, !!!a);
+	PR(d, !!!!a);
+
+	//  Operadores Menos y mas unario ( - / + )
+	a = +3;
+	b = -3;
+	PRINT2(d, a, b);
+	PRINT2(+d, a, b);
+
+	// Operador menos Unario ( ~ )
+	a = 20;
+	PRINT2(d, a, ~a);
+
+	// Operadores incremento en 1 y decremento en 1  ( ++ / --)
+	a = 10;
+	b = 10;
+	a++; 
+	b--;
+	PRINT2(d, a, b);
+
+	a = 10;
+	b = 10;
+	++a; 
+	--b;
+	PRINT2(d, a, b);
+
 
 	system("pause");
 	return 0;

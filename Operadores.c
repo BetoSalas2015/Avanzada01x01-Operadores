@@ -83,6 +83,40 @@ int main()
 	--b;
 	PRINT2(d, a, b);
 
+	a = 10;
+	b = 10;
+	PR(d, a++ + b);
+	PR(d, a);
+
+	a = 10;
+	PR(d, ++a + b);
+	PR(d, a);
+
+	a = 10;
+	b = 10;
+	PR(d, a++ + ++b);
+	PRINT2(d, a, b);
+
+	a = 10;
+	b = 10;
+	PR(d, ++a + b++);
+	PRINT2(d, a, b);
+
+	a = 10;
+	b = 10;
+	PR(d, ++a + a++);
+	PRINT2(d, a, b);
+
+	a = 5; b = 8; c = 0;
+	PRINT1(d, d = a++ + b-- + !c);
+	PRINT4(d, a, b, c, d);
+
+	// Operador "Tamaño de"  ( sizeof )
+	printf("El tipo de dato int ocupa %d bytes en la memoria.\n", sizeof (int) );
+	printf("El tipo de dato float ocupa %d bytes en la memoria.\n", sizeof (float) );
+	printf("El tipo de dato double ocupa %d bytes en la memoria.\n", sizeof (double) );
+	printf("El tipo de dato char ocupa %d bytes en la memoria.\n", sizeof (char) );
+	printf("El arreglo arr ocupa %d bytes en la memoria.\n", sizeof (arr) );
 
 	system("pause");
 	return 0;

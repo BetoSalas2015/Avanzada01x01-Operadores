@@ -66,7 +66,7 @@ int main()
 	PRINT2(d, a, b);
 	PRINT2(+d, a, b);
 
-	// Operador menos Unario ( ~ )
+	// Operador complento a uno ( ~ )
 	a = 20;
 	PRINT2(d, a, ~a);
 
@@ -117,6 +117,40 @@ int main()
 	printf("El tipo de dato double ocupa %d bytes en la memoria.\n", sizeof (double) );
 	printf("El tipo de dato char ocupa %d bytes en la memoria.\n", sizeof (char) );
 	printf("El arreglo arr ocupa %d bytes en la memoria.\n", sizeof (arr) );
+
+	// Operadores Dirección ( & ) e indirección ( * )
+	a = 50;
+	ptr = &a;	// Guardamos la dirección de memoria de a (creamos el alias)
+
+	PR(p, &a);
+	PR(d, a);
+	PR(p, &ptr);
+	PR(p, ptr);
+	PR(d, *ptr);
+
+	// Operador cast ( (tipo) )
+	car = 75;
+	PR(c, car);			//  Esto no es promoción de tipos, solo es impresión
+	PR(d, car);
+
+	a = car;			//  Promuevo  char -> int
+	f = a;				//  int  -> float
+	h = f;				// float  -> double
+	f = h;				//  "Pérdida de presición"
+
+	a = (int) car;		// Conversión explícita de char a int
+	f = (float) a;		// Conversión explícita de int a float
+	h = (double) f;		// Conversión explícita de float a double
+	f = (float) h;		// Conversión explícita de double a float
+	car = (char) h;		// Conversión explícita de double a char
+
+	//   5 / 2 = 2		División entera
+	//   5.0 / 2 = 2.5  
+	PR(d, 5 / 2);
+	PR(f, 5 / 2);
+	PR(f, (float) 5 / 2);
+	PR(f,  5 / (float) 2);
+
 
 	system("pause");
 	return 0;

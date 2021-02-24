@@ -42,8 +42,7 @@ void primarios()
 	PR(d, juancho->edad);
 	PR(c, juancho->sexo);
 }
-
-int main()
+void unarios() 
 {
 	//   Jerarquía nivel 2 - Operadores unarios
 	//  La negación ( ! )
@@ -150,6 +149,86 @@ int main()
 	PR(f, 5 / 2);
 	PR(f, (float) 5 / 2);
 	PR(f,  5 / (float) 2);
+}
+void multiplicativos()
+{
+	//  Jerarquía nivel 3 - Operadores Multiplicativos
+	//  Multiplicación ( * )
+	PR(d, 5 * 4);
+
+	// División  ( / )
+	PR(d, 5 / 2);		// División entra (entro / entero = entero)
+	PR(f, 5.0 / 2);
+	PR(f, 5 / 2.0);
+	PR(f, 5.0 / 2.0);
+
+	PR(f, 5 / 9 * (80 - 32));   //  Error: división entera
+	PR(f, 5.0 / 9 * (80 - 32));
+
+	//  Módulo o residuo ( % )
+	printf("5 %% 2 = %d\n", 5 % 2);
+	a = 25;
+	PR(d, a);
+	if(a % 2 != 0)
+		printf("El número es impar\n");
+	else
+		printf("El numero es par\n");
+}
+void aditivos()
+{
+	//  jerarquía nivel 4 -  Operadores Aditivos
+	// Operador suma ( + )
+	PR(d, 3 + 4);
+
+	// Operador resta ( - )
+	PR(d, 3 - 4);
+}
+void desplazamiento()
+{
+	//  Jerarquía nivel 5 - operadores de desplazamiento
+	// Desplazamiento a la izquierda ( << )
+	PR(d, 54 << 1);
+	PR(d, 54 << 2);
+	PR(d, 54 << 3);
+	PR(d, 54 << 4);
+	NL;
+
+	// Desplazamiento a la derecha ( >> )
+	PR(d, 54 >> 1);
+	PR(d, 54 >> 2);
+	PR(d, 54 >> 3);
+	PR(d, 54 >> 4);
+}
+void relacionales()
+{
+	//  Jerarquía nivel 6 - Operadores relacionales
+	// Operador menor que ( < )
+	PR(d, 5 < 10);
+
+	// Operador menor o igual que ( <= )
+	PR(d, 5 <= 10);
+
+	// Operador mayor que ( > )
+	PR(d, 5 > 10);
+
+	// Operador mayor o igual que ( >= )
+	PR(d, 5 >= 10);
+}
+void igualdad()
+{
+	// Jerarquía nivel 7 - Operadores de igualdad
+	// Operador igual que ( == )
+	PR(d, 5 == 10);
+
+	// Operador diferente de  o no igual a ( != )
+	PR(d, 5 != 10);
+}
+
+int main()
+{
+	// Jerarquía nivel 8 - Operadores de Bits
+	// Operador and de bits ( & )
+	PR(d, 54 & 108);
 
 
 	system("pause");

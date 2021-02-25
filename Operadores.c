@@ -223,13 +223,47 @@ void igualdad()
 	// Operador diferente de  o no igual a ( != )
 	PR(d, 5 != 10);
 }
-
-int main()
+void deBits()
 {
-	// Jerarquía nivel 8 - Operadores de Bits
+	// Jerarquía nivel 8 
 	// Operador and de bits ( & )
 	PR(d, 54 & 108);
 
+	// Jerarquía nivel 10
+	// Operador or de bits ( | )
+	PR(d, 54 | 108);
+
+	// Jerarquía nivel 9
+	// Operador xor de bits ( ^ )
+	PR(d, 54 ^ 108);
+}
+
+int main()
+{
+	// Jerarqía nivel 9 
+	//  operador And (y) lógico - ( && )
+	PR(d, 54 && 108);
+	PR(d, 0 && 108);
+
+	// Jerarqía nivel 10 
+	//  operador or o) lógico - ( || )
+	PR(d, 54 || 108);
+	PR(d, 0 || 108);
+	NL;
+	a = 5;
+	b = 0;
+	c = 2;
+	PRINT3(d, a, b, c);
+	PRINT1(d, a && b || c);
+	PRINT1(d, a || b && c);
+	PRINT1(d, a++ && b++ || c++);
+	PRINT3(d, a, b, c);
+
+	a = 0;
+	b = 5;
+	c = 2;
+	PRINT1(d, (a++ == 1) && (b++ == 4) || (c++ == 3));
+	PRINT3(d, a, b, c);
 
 	system("pause");
 	return 0;

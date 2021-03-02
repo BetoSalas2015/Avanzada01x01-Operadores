@@ -237,10 +237,9 @@ void deBits()
 	// Operador xor de bits ( ^ )
 	PR(d, 54 ^ 108);
 }
-
-int main()
+void lógicos() 
 {
-	// Jerarqía nivel 9 
+// Jerarqía nivel 9 
 	//  operador And (y) lógico - ( && )
 	PR(d, 54 && 108);
 	PR(d, 0 && 108);
@@ -262,8 +261,68 @@ int main()
 	a = 0;
 	b = 5;
 	c = 2;
+	PRINT3(d, a, b, c);
 	PRINT1(d, (a++ == 1) && (b++ == 4) || (c++ == 3));
 	PRINT3(d, a, b, c);
+
+		a = 0;
+	b = 5;
+	c = 2;
+	PRINT3(d, a, b, c);
+	PRINT1(d, (a++ == 1) && (b++ == 4) && (c++ == 3));
+	PRINT3(d, a, b, c);
+}
+void condicional()
+{
+	// Jerarquía nivel 11 - Operador Condicional
+	a = 5;
+	b = 7;
+	PRINT2(d, a, b);
+	PR(d, a > b ? a : b);
+	PR(d, a < b ? a : b);
+
+	c = (a >= b) ? a : b;
+	PR(d, c);
+}
+void asignación()
+{
+	// Jerarquía nivel 12 - Asignación (simple y compuesta)
+	// Asignación simple ( = )
+	a = 30 * 20;
+	PR(d, a);
+	//  Asignación multiple 
+	a = b = c = d = 30 * 20;
+	PRINT4(d, a, b, c, d);
+
+	// Asignación compuesta   ( +=, -=, *=, etc.)
+
+	a = 5;
+	PRINT2(d, a, a = a + 5);
+
+	a = 5;
+	PRINT2(d,a, a += 5);
+
+	a = b = c = 1;
+	a -= b += c *= d = 2;
+	PRINT4(d, a, b, c, d);
+
+}
+void coma()
+{
+	// Jerarquía nivel 13 - Operador coma ( , )
+	int a, b, c, d;
+	int arreglo[] = { 0, 1, 2, 3, 4, 5 };
+	pow(2, 5);
+}
+
+int main()
+{
+	//  Ejercicios
+	int a = 3, b = 3, c = 0, d = -1, e = 3;
+	float f = 2;
+
+	PRINT1(d, a += 2 * a * ++b);
+	PRINT5(d, a, b, c, d, e); PRINT1(f, f);
 
 	system("pause");
 	return 0;

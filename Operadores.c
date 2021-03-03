@@ -324,6 +324,37 @@ int main()
 	PRINT1(d, a += 2 * a * ++b);
 	PRINT5(d, a, b, c, d, e); PRINT1(f, f);
 
+	PRINT1(d, b = ++b + b++);
+	PRINT5(d, a, b, c, d, e); PRINT1(f, f);
+
+	a = 3; b = 3; c = 0; d = -1; e = 3;
+	PRINT1(d, d /= d + d++);
+	PRINT5(d, a, b, c, d, e); PRINT1(f, f);
+
+	a = 3; b = 3; c = 0; d = -1; e = 3;
+	PRINT1(d, d = d ? d-- : d++);
+	PRINT5(d, a, b, c, d, e); PRINT1(f, f);
+
+	a = 3; b = 3; c = 0; d = -1; e = 3;
+	PRINT1(d, !a + !b + (d && c));
+	PRINT5(d, a, b, c, d, e); PRINT1(f, f);
+
+	a = 3; b = 3; c = 0; d = -1; e = 3;
+	PRINT1(d, d = (a || b) && (c || (d && !f)) );
+	PRINT5(d, a, b, c, d, e); PRINT1(f, f);
+
+	a = 3; b = 3; c = 0; d = -1; e = 3;
+	PRINT1(d, e *= !!!!!!!d );
+	PRINT5(d, a, b, c, d, e); PRINT1(f, f);
+
+	a = 3; b = 3; c = 0; d = -1; e = 3;
+	PRINT1(d, a % b * c - d++ );
+	PRINT5(d, a, b, c, d, e); PRINT1(f, f);
+
+	a = 3; b = 3; c = 0; d = -1; e = 3;
+	PRINT1(f, f /= (float) e-- / e++);
+	PRINT5(d, a, b, c, d, e); PRINT1(f, f);
+
 	system("pause");
 	return 0;
 }
